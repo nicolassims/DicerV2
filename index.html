@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+AUTHOR: Nicolas Sims
+VERSION: 2.4.7
+CREATED: 2/3/2017
+ASSIGNMENT: Create a Dice Roller PWA
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>They see me rollin'</title>
+        <link href="public/css/foundation.min.css" rel="stylesheet">
+        <link href="public/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="row hightop">
+        <div class="small-12 columns small-text-center">Type of Dice</div>
+    </div>
+    <form id="theForm">
+        <div class="row">
+            <div class="small-6 columns small-text-center">
+                <input type="radio" name="typeDice" class="typeDice" value="2">d2
+                <input type="radio" name="typeDice" class="typeDice" value="4">d4
+                <input type="radio" name="typeDice" class="typeDice" id="defaultTypeDice" value="6">d6
+                <input type="radio" name="typeDice" class="typeDice" value="8">d8
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-6 columns small-text-center">
+                <input type="radio" name="typeDice" class="typeDice" value="10">d10
+                <input type="radio" name="typeDice" class="typeDice" value="20">d20
+                <input type="radio" name="typeDice" class="typeDice" value="100">d100
+            </div>
+        </div>
+    </form>
+    <div class="row hightop">
+        <div class="small-6 columns small-text-center">Number of Dice</div>
+    </div>
+    <div class="small-6 columns small-text-center">
+        <input type="text" id="numberDice" placeholder="Number of Dice?">
+    </div>
+
+    <div class="row hightop">
+        <div class="small-12 success button hollow columns small-text-center" id="button">
+            Roll 'em up and knock 'em down!
+        </div>
+    </div>
+    <div class="row hightop">
+        <form id="theSecondForm">
+            <input type="radio" name="typeResults" id="defaultTypeResults" class="typeResults small-6 columns">
+            <input type="radio" name="typeResults" class="typeResults small-6 columns">
+        </form>
+    </div>
+    <div class="row">
+        <div class="small-6 columns text-center">All at once</div>
+        <div class="small-6 columns text-center">One at a time</div>
+    </div>
+    <div class="row hightop">
+        <input type="text" id="diceResults" placeholder="Results will appear here">
+    </div>
+    <!-- SCRIPTS -->
+    <script src= "public/javascripts/main.js"></script>
+    </body>
+</html>
