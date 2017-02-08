@@ -1,5 +1,6 @@
 {
     "name": "High Roller",
+    "short_name": "Roller",
     "icons": [
         {
             "src": "public/favicons/android-chrome-192x192.png",
