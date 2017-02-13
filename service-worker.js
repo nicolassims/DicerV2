@@ -1,13 +1,13 @@
 "use strict";
 
-const VERSION = 1.01;
-let cacheName = 'diceRollerCache';
+const VERSION = 1.02;
+let cacheName = '1.02';
 let filesToCache = [
     './index.html',
     './javascripts/main.js',
     './css/style.css',
     './css/foundation.min.css',
-    './favicons/favicon.ico',
+    './favicons/android-chrome-512x512.png',
     './favicons/android-chrome-192x192.png'
 ];
 
@@ -34,9 +34,11 @@ self.addEventListener('activate', (e) => {
     return self.clients.claim();
 });
 
-self.addEventListener('fetch', (e) => {
+self.addEventListener('fetch', function(e) {
+    console.log('[ServiceWorker] Fetch', e.request.url);
     e.respondWith(
-        caches.match(e.request).then((response) => {
-        return response;
-    }));
+        caches.match(e.request).then(function(response) {
+            return response || fetch(e.request);
+        })
+    );
 });
