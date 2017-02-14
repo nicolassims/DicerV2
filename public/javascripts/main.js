@@ -8,7 +8,7 @@
 
 class main {
     constructor() {
-        serviceWorkers.setServiceWorker();
+        serviceWorkers.loadServiceWorker();
         setValues.readyApp();
         performFunction.rollDice();
     }

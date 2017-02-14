@@ -20,10 +20,11 @@ self.addEventListener('install', (e) => {
     );
 });
 
-self.addEventListener('activate', (e) => {
+self.addEventListener('activate', function(e) {
+    console.log('[ServiceWorker] Activate');
     e.waitUntil(
-        caches.keys().then((keyList) => {
-            return Promise.all(keyList.map((key) => {
+        caches.keys().then(function(keyList) {
+            return Promise.all(keyList.map(function(key) {
                 if (key !== cacheName) {
                     console.log('[ServiceWorker] Removing old cache', key);
                     return caches.delete(key);
