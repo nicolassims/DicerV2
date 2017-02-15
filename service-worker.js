@@ -1,7 +1,6 @@
 "use strict";
 
-const VERSION = 1.02;
-let cacheName = '1.02';
+let cacheName = '1.04';
 let filesToCache = [
     './index.html',
     './javascripts/main.js',
