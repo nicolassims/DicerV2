@@ -1,6 +1,6 @@
 "use strict";
 
-let cacheName = '1.04';
+let cacheName = '1.05';
 let filesToCache = [
     './index.html',
     './javascripts/main.js',
