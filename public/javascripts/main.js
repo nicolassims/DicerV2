@@ -14,13 +14,7 @@ class main {
     }
 }
 
-class serviceWorkers {
-    static loadServiceWorker() {
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js');
-        }
-    }
-}
+
 
 class setValues {
     static readyApp() {
